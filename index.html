@@ -195,11 +195,7 @@
         
         
         <script>
-          $('img#image').attr("src", src).one('load',function() {
-  $(this).fadeIn(700);
-}).each(function() {
-  if (this.complete) $(this).trigger('load');
-});
+  
         var slideIndex = 0;
         showSlides();
         function showSlides() {
