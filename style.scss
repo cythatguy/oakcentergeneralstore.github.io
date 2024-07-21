@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+
+  .texttop {
+    position: fixed;
+ top: 20px;
+ left: 10px;
+
+  }
+  .link{
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    color: aqua;
+  }
+
+  .cover{
+    background-color: rgb(255, 255, 255);
+    opacity: .8;
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    
+ 
+  }
+  .click{
+    z-index: 100;
+width: 100vw;
+height: 100vh;
+position: absolute;
+   align-items: center;
+    display: flex;
+    justify-content: center;}
+    
+  .hand {
+    width: 200px;
+    
+   height: 200px;
+  }
+  .textbottom{
+    bottom: 20px;
+    position: absolute;
+    width: 100vw;
+   
+  }
+    
+
+    .mySlides{
+      padding-top: 40px;
+    }

@@ -7,6 +7,88 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    cy was here again
+    <div id="hand" type="button" value="PLAY" onclick="play()" class="click">
+        <img class="hand" type="button" value="PLAY" onclick="play()" src="clickhere.png" alt="">
+    </div>
+    <audio id="audio" src="landon.mp3"></audio>
+
+    <div type="button" value="PLAY" onclick="play()" id="panel"  class="cover"></div>
+    
+        <a class="texttop">
+            Oak Center General Store
+        </a>
+    
+   <a class="link" href="info.html">info</a>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="images/IMG_20240515_0004.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="https://hips.hearstapps.com/roa.h-cdn.co/assets/16/30/1469467513-01-2016-aston-martin-db9-gt.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">Ï
+          <img src="https://article.images.consumerreports.org/prod/content/dam/CRO%20Images%202017/Magazine-Articles/April/Google-Auto-Profile-images-2017/PRF-811" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="http://www.lexus.com/byl2014/pub-share/images/series/lc.png" style="width:100%">
+        </div>
+        
+        </div>
+        <div class="textbottom">
+            <marquee id="textbottom" behavior="scroll" direction="left">
+        hopes going to sleep just thought id let you know whats up................................
+        i need to let the puppy out to pee.........................
+        hes the last one............................ 
+        theres a guy coming on monday to get him.......................... 
+        hope he doesnt back out................................ 
+        we found these pictures ill post some of the good ones as we scan them...................... 
+        yea so maybe sweet corn next summer...................................... 
+        gotta fix the leaks on the roof........................................ 
+        the music is my friend Landon......................... 
+        maybe youll see him play a show here someday.........................
+        found a bunch of homemade wine in the cellar in the basement................... 
+        one of them was dated 78.........................
+        thats pretty shortly after steven moved in here........................ 
+        been tempted to taste it..................... 
+        ever had a cat that sneaks into your house?........................... 
+        hes a good guy tho................................ 
+        wow a bat just flew over my head..................... 
+        he went out the way he came in....................... 
+        gotta fix that window thats how they get in.................... 
+        hope kicked my butt in cribbage today...................
+        
+            </marquee>
+        </div>
+    </div>
+        <br>
+        
+        
+        <script>
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+        }
+        slideIndex++;
+        if (slideIndex> slides.length) {slideIndex = 1} 
+        var rand = Math.floor((Math.random() * slides.length));
+        slides[rand].style.display = "block"; 
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+        document.getElementById("panel").style.display = "none";
+        document.getElementById("hand").style.display = "none";
+        
+      }
+        </script>
 </body>
 </html>
