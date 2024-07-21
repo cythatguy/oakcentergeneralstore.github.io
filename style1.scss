@@ -45,12 +45,24 @@ position: absolute;
   }
   .textbottom{
     bottom: 20px;
-    position: absolute;
+    position: fixed;
     width: 100vw;
-   
+
   }
     
 
     .mySlides{
-      padding-top: 40px;
+     
+      width: 100vw;
+      object-fit: contain;
+   padding-top: 40px;
+  
+     
+      
+    }
+    .pics{
+      width: 100vw;
+  max-height: 60vh;
+      object-fit: contain;
+
     }
