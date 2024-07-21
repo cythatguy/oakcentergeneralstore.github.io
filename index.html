@@ -195,6 +195,11 @@
         
         
         <script>
+          $('img#image').attr("src", src).one('load',function() {
+  $(this).fadeIn(700);
+}).each(function() {
+  if (this.complete) $(this).trigger('load');
+});
         var slideIndex = 0;
         showSlides();
         function showSlides() {
@@ -210,11 +215,7 @@
         setTimeout(showSlides, 4000); // Change image every 2 seconds
     }
     function play() {
-      $('img#image').attr("src", src).one('load',function() {
-  $(this).fadeIn(700);
-}).each(function() {
-  if (this.complete) $(this).trigger('load');
-});
+
         var audio = document.getElementById("audio");
         audio.play();
         document.getElementById("panel").style.display = "none";
