@@ -17,7 +17,6 @@ body {
   position: fixed;
   top: 20px;
   right: 10px;
-  color: aqua;
 }
 
 .cover {
@@ -53,12 +52,12 @@ body {
   width: 100vw;
   -o-object-fit: contain;
      object-fit: contain;
-  padding-top: 40px;
+  padding-top: 50px;
 }
 
 .pics {
   width: 100vw;
-  max-height: 60vh;
+  max-height: 80vh;
   -o-object-fit: contain;
      object-fit: contain;
-}/*# sourceMappingURL=style1.css.map */
+}/*# sourceMappingURL=style2.css.map */

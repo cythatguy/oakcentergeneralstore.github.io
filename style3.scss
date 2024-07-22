@@ -17,7 +17,7 @@ body {
     position: fixed;
     top: 20px;
     right: 10px;
-    color: aqua;
+    
   }
 
   .cover{
@@ -51,18 +51,18 @@ position: absolute;
   }
     
 
-    .mySlides{
+  .mySlides{
      
-      width: 100vw;
-      object-fit: contain;
-   padding-top: 40px;
-  
-     
-      
-    }
-    .pics{
-      width: 100vw;
-  max-height: 60vh;
-      object-fit: contain;
+    width: 100vw;
+    object-fit: contain;
+ padding-top: 50px;
 
-    }
+   
+    
+  }
+  .pics{
+    width: 100vw;
+max-height: 80vh;
+    object-fit: contain;
+
+  }
