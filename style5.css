@@ -17,6 +17,7 @@ body {
   position: fixed;
   top: 20px;
   right: 10px;
+  color: paleturquoise;
 }
 
 .cover {
@@ -60,4 +61,4 @@ body {
   max-height: 80vh;
   -o-object-fit: contain;
      object-fit: contain;
-}/*# sourceMappingURL=style2.css.map */
+}/*# sourceMappingURL=style4.css.map */
