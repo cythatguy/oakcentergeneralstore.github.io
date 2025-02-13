@@ -61,4 +61,8 @@ body {
   max-height: 80vh;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.poster {
+  width: 100vw;
 }/*# sourceMappingURL=style5.css.map */
