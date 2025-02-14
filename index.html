@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Event Tree</title>
+<title>March 15th Show</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -25,39 +25,84 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Arvo", serif; color: white;}
 </head>
 <body style="background-color: black;">
 
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
 
-
-
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
 
 <!-- Page Content -->
-
+<div class="w3-main w3-padding-large" style="margin-left:40%">
 
 
 
   <!-- Header -->
-  
+  <i onclick="location.href='index.html'" style="display: none;" class="fa fa-home w3-left w3-xxlarge"></i>
+  <p class="w3-right">March 15</p>
   <header class="w3-container w3-center" style="padding:50px 16px;" id="home">
     <h1 style="text-decoration: underline;" class="w3-xlarge"><b>Oak Center General Store</b></h1>
-    <p class="w3-large">2025 Concert Schedule</p>
-    <p>(more dates will be added)</p>
-   
-
-    <p style="margin-top: 80px;">March 15th:</p>
-    <button style="border-radius: 50px;"  onclick="location.href='smap.html'" type="button" class="w3-button w3-light-grey">
-      <i class="fa fa-download"></i> Sweet Milk and Peaches
-    </button>
-    <p style="margin-top: 60px;">April 26th:</p>
-    <button style="border-radius: 50px;"  onclick="location.href='jackklatt.html'" type="button" class="w3-button w3-light-grey">
-      <i class="fa fa-download"></i> Jack Klatt
+    <p class="w3-large">Presents:</p>
+    <p class="w3-xlarge w3-hide-small">Sweet Milk and Peaches</p>
+    <img src="poster.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="poster.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+    <button onclick="location.href='https://square.link/u/NXi8IoJv'" type="button" class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i> buy tickets
     </button>
   </header>
 
   
 
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>overview</h2>
+    <hr class="w3-opacity">
+    <h4>The Talent</h4>
+    <p>Sweet Milk & Peaches are a husband and wife duo (Jesse Downs and Liz Voz) from the Driftless Area in Wisconsin, where they play music and tend to their family and orchards.
 
+      Jesse and Liz play a mix of traditional old-time music, original songs, with melodies that reflect influences from the Upper Midwest to the Southern Appalachians and beyond. They write songs from the gut and pull musty tunes from the attic of the early 20th century and air them out in the 21st century air.
+      <br><br>For the second set the duo will joined by friends, Davey Schmitz and Beau Sample, for a full band honky-tonk!
+      
+    </p>
+    <h4>Ticketing</h4>
+    <p>$20.00 online <br>$24.00 at the door</p>
+    <h4>Agenda</h4>
+    <ul>
+      <li>6:30-7:00 Check in</li>
+      <li>7:00-7:30 Doors</li>
+      <li>7:30-8:15 First set</li>
+      <li>8:15-8:30 Intermission</li>
+      <li>8:30-9:30 Second set</li>
+    </ul>
+    <h4>Parking</h4>
+    <p>Address: 67011 hwy 63, Lake City, MN 55041</p>
+    <p>Park on county rd 82. ONLY PARK ON THE SIDE OF THE ROAD THE GENERL STORE IS SITUATED ON</p>
+    <h4>Accessability</h4>
+    <p>The music venue itself is only accessed via staircase. The show will be played over speakers on the main floor for anyone who cannot or wishes not to go upstairs. <br><br>Tickets are required only for guests that go upstairs.</p>
+    <h4>Concessions</h4>
+    <p>Sorry, no alcohol will be served. We hope to get that back soon. <br><br>Other than that you can expect our usual lineup of popcorn, pop, cookies, etc.</p>
+    <h4>Any questions?</h4>
+   <p> phone: 651-448-0889 <br>
+    hopeschwen2299@gmail.com</p>
+    
+    
+    
+  <!-- End About Section -->
+  </div>
 
   <!-- Portfolio Section -->
-  <div style="display: none;" class="w3-padding-32 w3-content" id="portfolio">
+  <div class="w3-padding-32 w3-content" id="portfolio">
     
 
     <!-- Grid for photos -->
