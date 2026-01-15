@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Info / Contact</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  background:rgb(46, 149, 26);
+  color:white;
+  font-family:"Arvo", serif;
+}
+img{
+  object-fit: cover;
+}
+ul {
+  list-style:none;
+  padding:0;
+  max-width:700px;
+  margin:20px auto;
+}
+summary::before {
+  content: "\f107"; /* Font Awesome chevron */
+  font-family: FontAwesome;
+  position: absolute;
+  left: 10px;      /* push arrow farther left */
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  font-size: 1.2em;
+  transition: transform 0.25s ease;
+  pointer-events: none;
+}
+
+
+details {
+  margin-bottom:20px;
+}
+summary::after {
+  content: "\f107"; /* Font Awesome chevron-down */
+  font-family: FontAwesome;
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.25s ease;
+}
+
+/* rotate arrow when open */
+details[open] summary::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+summary {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: bold;
+  
+  padding: 20px 40px 20px 60px; /* more left padding for text */
+  color: black;
+  cursor: pointer;
+  list-style: none;
+  z-index: 1;
+}
+
+summary::-webkit-details-marker {
+  display:none;
+}
+
+/* hand-cut paper base */
+.month summary::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#f2f2f2;
+  z-index:-1;
+  box-shadow:0 4px 10px rgba(0,0,0,.25);
+  transform:rotate(-0.5deg);
+  transition:.25s ease;
+}
+
+.month summary:hover::before {
+  transform:rotate(0.8deg) scale(1.01);
+}
+
+/* unique shapes */
+.january summary::before {
+  clip-path:polygon(2% 12%,96% 4%,98% 30%,94% 86%,70% 92%,30% 96%,6% 88%,4% 30%);
+}
+
+.february summary::before {
+  clip-path:polygon(4% 6%,92% 10%,96% 38%,88% 92%,54% 86%,20% 94%,6% 70%,8% 22%);
+}
+
+.march summary::before {
+  clip-path:polygon(6% 18%,94% 6%,98% 40%,90% 90%,60% 96%,28% 90%,2% 76%,4% 34%);
+}
+
+.april summary::before {
+  clip-path:polygon(2% 10%,90% 2%,98% 26%,92% 82%,68% 98%,34% 90%,6% 78%,8% 36%);
+}
+
+.may summary::before {
+  clip-path:polygon(6% 8%,96% 14%,92% 44%,96% 88%,62% 94%,26% 90%,4% 66%,8% 26%);
+}
+
+.month-content {
+  margin-top:20px;
+}
+
+.show-card {
+  margin-bottom:30px;
+  text-align:center;
+}
+
+.polaroid {
+  width:200px;
+  margin:auto;
+ 
+  border:2px solid white;
+  border-radius:5px;
+  box-shadow:0 4px 8px rgba(255,255,255,.2);
+  background-color: rgb(1, 56, 1);
+}
+
+.container {
+  padding:0px;
+}
+.bandimg{
+  width:200px;
+  height: 200px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Home -->
+<div style="padding-bottom:40px;">
+  <i onclick="location.href='index.html'" class="fa fa-home w3-left w3-xxlarge"></i>
+</div>
+
+<ul>
+ <h3 style="text-align:center;">Folk Forum</h3>
+ <p style="text-align:center;">Winter/Spring 2026</p>
+<!-- JANUARY -->
+
+
+<!-- FEBRUARY -->
+<li>
+<details class="month february">
+  <summary>February</summary>
+  <div class="month-content">
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Friday<br>February 6th</p>
+      <div onclick="location.href='victrola.html'" class="polaroid w3-button">
+        <img src="images/victrolaman.jpg"class="bandimg" style="width:100%">
+        <div class="container">
+          <p style="text-decoration:underline;">Todd the Victrola Man <br> (Free Event)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Saturday<br>February 21st</p>
+      <div onclick="location.href='dean+b.html'" class="polaroid w3-button">
+        <img  id="change2" src="oldimgs/bruce2.webp"class="bandimg" style="width:100%;object-position: left;">
+        <div class="container">
+          <p style="text-decoration:underline;">Dean Magraw & <br> Bruce Henry</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Friday<br>February 27th</p>
+      <div onclick="location.href='betty.html'" class="polaroid w3-button">
+        <img id="change3" src="images/sophie.webp"class="bandimg" style="width:100%">
+        <div class="container">
+          <p style="text-decoration:underline;">Sophie Hiroko <br> & Betty Won’t</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</details>
+</li>
+
+<!-- MARCH -->
+<li>
+<details class="month march">
+  <summary>March</summary>
+  <div class="month-content">
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Saturday<br>March 7th</p>
+      <div onclick="location.href='corpse.html'" class="polaroid w3-button">
+        <img src="images/corpse.jpg"class="bandimg" style="width:100%">
+        <div class="container">
+          <p style="text-decoration:underline;">Corpse Reviver</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Friday<br>March 13th</p>
+      <div onclick="location.href='caitlin.html'" class="polaroid w3-button">
+        <img id="change" src="caitlin.jpg" class="bandimg" style="width:100%">
+        <div class="container">
+          <p style="text-decoration:underline;">Caitlin Angelica <br> & Joe Devito</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Saturday<br>March 14th</p>
+      <div onclick="location.href='joeprice.html'" class="polaroid w3-button">
+        <img src="images/joeicon.webp" class="bandimg" style="width:100%;object-position: left;">
+        <div class="container">
+          <p style="text-decoration:underline;">Joe & Vicki Price</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Saturday<br>March 21st</p>
+      <div onclick="location.href='cornbread.html'" class="polaroid w3-button">
+        <img src="images/cornicon.jpg" class="bandimg" style="width:100%;object-position: right;">
+        <div class="container">
+          <p style="text-decoration:underline;">Cornbread Harris Band</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Sunday<br>March 22nd</p>
+      <div onclick="location.href='dean+joe.html'" class="polaroid w3-button">
+        <img src="images/dean2.jpg" class="bandimg" style="width:100%">
+        <div class="container">
+          <p style="text-decoration:underline;">Dean Magraw <br> & Joe Schwen</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Saturday<br>March 28th</p>
+      <div onclick="location.href='sweetmilk.html'" class="polaroid w3-button">
+        <img src="images/sweetmilk.jpeg" class="bandimg" style="width:100%">
+        <div class="container">
+          <p style="text-decoration:underline;">Sweet Milk & Peaches</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</details>
+</li>
+
+<!-- APRIL -->
+<li>
+<details class="month april">
+  <summary>April</summary>
+  <div class="month-content">
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Friday<br>April 10th</p>
+      <div onclick="location.href='bovee.html'" class="polaroid w3-button">
+        <img src="images/bob.jpg" class="bandimg" >
+        <div class="container">
+          <p style="text-decoration:underline;">Bob Bovee</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Saturday<br>April 11th</p>
+      <div onclick="location.href='pieta.html'" class="polaroid w3-button">
+        <img src="images/pieta icon.avif" class="bandimg" >
+        <div class="container">
+          <p style="text-decoration:underline;">Pieta Brown & Liz Draper</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Friday<br>April 17th</p>
+      <div onclick="location.href='harold.html'" class="polaroid w3-button">
+        <img src="images/harold.jpg" class="bandimg" style="width:100%">
+        <div class="container">
+          <p style="text-decoration:underline;">Hurricane Harold <br> & Jeff Ray</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Saturday<br>April 18th</p>
+      <div onclick="location.href='lone.html'" class="polaroid w3-button">
+        <img src="images/lone.jpeg" class="bandimg" style="width:100%">
+        <div class="container">
+          <p style="text-decoration:underline;">Lone Piñon</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Sunday<br>April 19th</p>
+      <div onclick="location.href='acker.html'" class="polaroid w3-button">
+        <img src="images/acker.jpg" class="bandimg" style="width:100%">
+        <div class="container">
+          <p style="text-decoration:underline;">Chris Acker</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</details>
+</li>
+
+<!-- MAY -->
+<li>
+<details class="month may">
+  <summary>May</summary>
+  <div class="month-content">
+    <div class="show-card">
+      <p style="margin-bottom: 3px;">Friday<br>May 29th</p>
+      <div onclick="location.href='paper.html'" class="polaroid w3-button">
+        <img src="images/paper.jpg" class="bandimg" style="width:100%">
+        <div class="container">
+          <p style="text-decoration:underline;">Paper Wings</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+</li>
+
+</ul>
+<div style="max-width:700px;padding-top: 50px; margin:auto; font-size:1.05em; line-height:1.6;">
+
+  <h3 style="text-align:center; margin-bottom:20px;">All Upcoming Shows</h3>
+
+ 
+
+  <p>
+    <strong>February</strong><br>
+    <a href="victrola.html">Feb 6 – Todd the Victrola Man (Free Event)</a><br>
+    <a href="dean+b.html">Feb 21 – Dean Magraw &amp; Bruce Henry</a><br>
+    <a href="betty.html">Feb 27 – Sophie Hiroko &amp; Betty Won’t</a>
+  </p>
+
+  <p>
+    <strong>March</strong><br>
+    <a href="corpse.html">Mar 7 – Corpse Reviver</a><br>
+    <a href="caitlin.html">Mar 13 – Caitlin Angelica &amp; Joe Devito</a><br>
+    <a href="joeprice.html">Mar 14 – Joe &amp; Vicki Price</a><br>
+    <a href="cornbread.html">Mar 21 – Cornbread Harris Band</a><br>
+    <a href="dean+joe.html">Mar 22 – Dean Magraw &amp; Joe Schwen</a><br>
+    <a href="sweetmilk.html">Mar 28 – Sweet Milk &amp; Peaches</a>
+  </p>
+
+  <p>
+    <strong>April</strong><br>
+    <a href="bovee.html">Apr 10 – Bob Bovee</a><br>
+    <a href="pieta.html">Apr 11 – Pieta Brown &amp; Liz Draper</a><br>
+    <a href="harold.html">Apr 17 – Hurricane Harold &amp; Jeff Ray</a><br>
+    <a href="lone.html">Apr 18 – Lone Piñon</a><br>
+    <a href="acker.html">Apr 19 – Chris Acker</a>
+  </p>
+
+  <p>
+    <strong>May</strong><br>
+    <a href="paper.html">May 29 – Paper Wings</a>
+  </p>
+
+</div>
+<script>
+function swapImages(imgId, image1, image2, interval = 2000) {
+    const img = document.getElementById(imgId);
+    if (!img) return;
+
+    let showingFirst = true;
+
+    setInterval(() => {
+        img.src = showingFirst ? image2 : image1;
+        showingFirst = !showingFirst;
+    }, interval);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    // First image swap
+    swapImages(
+        "change",
+        "images/caitlin.jpg",
+        "images/joeface.jpeg",
+        2000
+    );
+
+    // Second image swap (different images, different element)
+    swapImages(
+        "change2",
+        "images/dean.jpg",
+        "oldimgs/bruce2.webp",
+        2000
+    );
+        swapImages(
+        "change3",
+        "images/sophie.webp",
+        "images/betty .jpg",
+        2000
+    );
+});
+</script>
+
+
+
+</body>
+</html>

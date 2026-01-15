@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>March 22 Show</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Arvo", serif; color: white;}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(images/dean2.jpg);
+  min-height: 100%;
+  background-color: black;
+}
+.blink-border {
+  
+  border: 3px dotted gold;          /* initial gold dotted border */
+  border-radius: 8px;                /* optional rounded corners */
+  animation: blink-border 2.5s infinite;
+  padding: 5px;                       /* adjust as needed */
+}
+
+/* Only the border “blinks” by changing color */
+@keyframes blink-border {
+  0%, 50%, 100% {
+    border-color: gold;
+  }
+  25%, 75% {
+    border-color: transparent; /* border disappears temporarily */
+  }
+}
+</style>
+</head>
+<body style="background-color: black;">
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+
+
+  <!-- Header -->
+     <i onclick="location.href='shows.html'" class="fa fa-arrow-left w3-left w3-large"></i>
+  <header class="w3-container w3-center blink-border" style="padding:50px 10px 0px 10;max-width: 350px;margin: auto;margin-top: 60px;" id="home">
+    <h1 style="margin-bottom: 0px;font-size: 30px;">Folk Forum</h1>
+    <p style="margin-top: 0px; margin-bottom: 15px;">Presents:</p>
+    <p style="margin-top: 0px;" class="w3-xlarge">Dean Magraw & Joe Schwen
+    </p>
+
+    <img src="images/dean.jpg" id="change" class="w3-image w3-hide-large w3-round" style="aspect-ratio: 1;object-fit: cover;object-position: center; " width="" height="">
+  
+    
+  </header>  
+<div style="margin-top: 50px;" class="w3-center">
+
+  <p style="margin: 5px 0; font-weight: bold;">Oak Center General Store</p>
+  <p style="margin: 5px 0;">Sunday, March 22 @ 7:30pm</p>
+
+  <button 
+    onclick="location.href='https://square.link/u/bf14xeJl'" 
+    type="button" 
+    class="w3-button w3-green w3-round-large w3-padding-large w3-hover-gold"
+    style="font-size:16px; min-width:200px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <i class="fa fa-ticket"></i> Buy Tickets
+  </button>
+
+</div>     
+  
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>overview</h2>
+    <hr class="w3-opacity">
+    <h4>The Talent</h4>
+    <p>
+      The family favorite jaw-droppingly talented and quick-witted Dean Magraw makes a welcome return with Zumbro Falls’ own bass-playing extraordinaire Joe Schwen! This is a Sunday afternoon show, a great time to come down with all the kids and grandmas and grandpas and enjoy the sweet musical stylings of this dynamic duo. A rare opportunity to observe these two, don’t miss it!
+    </p>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4j75epJSs27sm0CWGBU8iL?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    <p>$21.50 online <br>$24.00 at the door</p>
+    <h4>Agenda</h4>
+    
+    <ul>
+      <li>6:30-7:30 Doors</li>
+      <li>7:30-9:30 Music</li>
+     
+    </ul>
+    <h4>Location</h4>
+    <p>Address: 67011 hwy 63, Lake City, MN 55041</p>
+    <h4>Parking</h4>
+    <p>ONLY PARK ON EAST SIDE OF 82 (general store side of the gravel road)</p>
+    <p>refer to picture on homepage if confused</p>
+    <h4>Accessibility</h4>
+    <p>The music venue itself is only accessed via staircase. The show will be played over speakers on the main floor for anyone who cannot or wishes not to go upstairs. <br><br>Tickets are required only for guests that go upstairs.</p>
+
+    <h4>Any questions?</h4>
+   <p> phone: 616-260-4924 <br>
+    oakcentergeneralstoremn@gmail.com</p>
+    
+    
+    
+  <!-- End About Section -->
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/FO12Wz0ycUU?si=HJ6-AvEs7b9NzUSB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

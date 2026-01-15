@@ -12,286 +12,284 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="style1.css">
   <style>
-    div.polaroid {
-      width: 250px;
-      box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-      text-align: center;
-      border: 2px solid rgb(255, 255, 255);
+    body {
+      background-color: aqua;
+    }
+
+    /* Mobile first */
+    .hero {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .hero-text {
+      padding: 15px;
+    }
+
+    /* Desktop layout */
+    @media (min-width: 768px) {
+     
+
+    
+
+      .hero-text {
+        width: 40%;
+      }
+ .slide-img {
+      max-width: 100%;
+      /* scale image */
+      max-height: 100%;
+    
+    }
+      
+    }
+
+    .top-bar {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      /* left and right items */
+      align-items: center;
+      padding: 20px 10px;
+      /* top/bottom 20px, left/right 10px */
+      background: transparent;
+      /* or any color if you like */
+
+    }
+
+    .top-left {
+      position: relative;
+      padding: 10px 30px;
+      font-weight: bold;
+      display: inline-block;
+      z-index: 1;
+      color: black;
+    }
+
+    .top-left::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      /* adjust for banner thickness */
+      background: gold;
+      z-index: -1;
+      clip-path: polygon(
+          /* top edge */
+          0% 0%, 5% 10%, 10% 0%, 15% 10%, 20% 0%, 25% 10%, 30% 0%, 35% 10%, 40% 0%, 45% 10%, 50% 0%, 55% 10%, 60% 0%, 65% 10%, 70% 0%, 75% 10%, 80% 0%, 85% 10%, 90% 0%, 95% 10%, 100% 0%,
+          /* right edge */
+          100% 0%, 100% 25%, 100% 50%, 100% 75%, 100% 100%,
+          /* bottom edge */
+          100% 100%, 95% 90%, 90% 100%, 85% 90%, 80% 100%, 75% 90%, 70% 100%, 65% 90%, 60% 100%, 55% 90%, 50% 100%, 45% 90%, 40% 100%, 35% 90%, 30% 100%, 25% 90%, 20% 100%, 15% 90%, 10% 100%, 5% 90%, 0% 100%,
+          /* left edge */
+          0% 100%, 0% 75%, 0% 50%, 0% 25%, 0% 0%);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .slideshow-container {
+      width: 100%;
+      height: 300px;
+      /* or whatever height you want */
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      /* horizontal centering */
+      align-items: center;
+      /* vertical centering */
+    }
+
+    .star-base {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      /* behind the image */
+    }
+
+    .star-base::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: gold;
+      clip-path: polygon(50% 0%, 61% 22%, 85% 18%, 70% 40%, 100% 55%,
+          72% 60%, 82% 90%, 50% 72%, 18% 90%, 28% 60%,
+          0% 55%, 30% 40%, 15% 18%, 39% 22%);
+      z-index: -1;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .slide-img {
+      max-width: 60%;
+      /* scale image */
+      max-height: 100%;
+      /* make sure it fits container */
+      display: block;
+      z-index: 2;
+      /* above the star */
+    }
+
+    .menu-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      /* mobile: 2 columns */
+      gap: 10px;
+      padding: 15px 0;
+    }
+
+    .menu-buttons button {
+      padding: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #FFD700;
+      border: 2px solid #DAA520;
       border-radius: 5px;
+      transition: background 0.3s;
     }
 
-    div.container {
-      padding: 10px;
+    .menu-buttons button:hover {
+      background-color: #FFC107;
     }
 
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Arvo", serif;
-      color: rgb(255, 255, 255);
+
+
+
+
+    @media (min-width: 768px) {
+      .hero {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        /* top-aligned */
+      }
+
+    .mySlides {
+      width: 60%;
+      display: flex;
     }
 
-    .w3-row-padding img {
-      margin-bottom: 12px
-    }
+      .hero-text {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: auto;
+        /* push to the right */
+      }
 
-    .bgimg {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-image: url(poster.jpg);
-      min-height: 100%;
-      background-color: black;
+      .menu-buttons {
+        grid-template-columns: 1fr;
+        /* single column on desktop */
+        width: 100%;
+      }
     }
   </style>
 </head>
 
-<body style="background-color: black;">
+<body>
+  <header class="top-bar w3-small">
+    <div class="top-left">Oak Center General Store</div>
+    <div value="PLAY" onclick="play()" id="panel" class="top-right w3-xlarge">&#128263;</div>
+    <audio id="audio" src="landon.mp3"></audio>
+    <div style="display: none;" onclick="stop()" id="stop" class="top-right w3-xlarge">&#128264;</div>
 
-
-
-
-
-  <!-- Page Content -->
-
-
-
-
-  <!-- Header -->
-
-  <button
-    onclick="location.href='https://square.link/u/4q4fxaIy'"
-    type="button" class="w3-left w3-button w3-tiny w3-light-grey w3-padding-small w3-margin-top w3-margin-left">
-    Donate
-  </button>
-  <button onclick="location.href='info.html'" type="button"
-    class="w3-right w3-button w3-tiny w3-light-grey w3-padding-small w3-margin-top w3-margin-right">
-    Contact/Info
-  </button>
-  <header class="w3-container w3-center" style="padding:50px 16px;" id="home">
-
-    <h1 class="w3-xlarge"><b>Oak Center General Store</b></h1>
-    <h2 class="w3-large">2025 Fall/Winter Schedule</h2>
-    <button
-    onclick="location.href='newsletterwebsite.pdf'"
-    type="button" class=" w3-button w3-large w3-light-grey w3-padding-small  w3-margin-left">
-    Newsletter!!!!!
-  </button>
-    
-
-
-
-
-    <p style="margin-top: 50px;display: none;">August 15:</p>
-    <div onclick="location.href='tommy.html'" style="margin: auto;display: none;" class="polaroid w3-center w3-button">
-
-      <img src="images/tommyface.jpg" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline;">Tommy Goodroad</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-
-    <p style="margin-top: 50px;display: none;">September 5:</p>
-    <div onclick="location.href='rachael.html'" style="margin: auto;display: none;" class="polaroid w3-center w3-button">
-
-      <img src="images/rachel.jpg" alt="Norway" style="width:100%;">
-      <div class="container">
-
-        <p style="text-decoration: underline;">Rachael Kilgour</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-    <p style="margin-top: 50px;display: none;">September 13:</p>
-    <div onclick="location.href='dean.html'" style="margin: auto;display: none;" class="polaroid w3-center w3-button">
-
-      <img src="images/deaninit.jpg" alt="Norway" style="width:100%;">
-      <div class="container">
-
-        <p style="text-decoration: underline;">Dean Magraw</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-    <p style="margin-top: 50px;display: none;">September 20:</p>
-    <div onclick="location.href='maryc.html'" style="margin: auto;display: none;" class="polaroid w3-center w3-button">
-
-      <img src="images/mary.jpg" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline; font-size: small;">Mary Cutrufello <br> & <br> Dan Lowinger</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-    <p style="margin-top: 50px;display: none;">October 11:</p>
-    <div onclick="location.href='pop.html'" style="margin: auto;display: none;" class="polaroid w3-center w3-button">
-
-      <img src="images/popicongood.webp" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline; font-size: small;display: none;">Pop Wagner's <br> Bunkhouse Chorale</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-
-    
-    <p style="margin-top: 50px;display: none;">October 25:</p>
-    <div onclick="location.href='lonerock.html'" style="margin: auto;display: none;" class="polaroid w3-center w3-button">
-
-      <img src="images/brideicon.JPG" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline;">Lone Rock bride</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-    <p style="margin-top: 50px;display: none;">November 8:</p>
-    <div onclick="location.href='idle.html'" style="margin: auto;display: none;" class="polaroid w3-center w3-button">
-
-      <img src="images/idle.jpg" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline;">Idle Rose</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-      <p style="margin-top: 50px;display: none;">November 9:</p>
-    <div onclick="location.href='canty.html'" style="margin: auto;display: none;" class="polaroid w3-center w3-button">
-
-      <img src="images/cantyface.jpg" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline;">Caitlin Canty <br> with 4 piece band</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-    <p style="margin-top: 50px;">November 15:</p>
-    <div onclick="location.href='AJ.html'" style="margin: auto;" class="polaroid w3-center w3-button">
-
-      <img src="images/ajnewicon.jpeg" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline; font-size: small;">Fiddlin AJ Srubas & The<br>Signal Mountain Serenaders</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-     <p style="margin-top: 50px;">December 5:</p>
-    <div onclick="location.href='jeff.html'" style="margin: auto;" class="polaroid w3-center w3-button">
-
-      <img src="images/face.png" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline;font-size: small;">Jeffrey Foucault <br> with David Moore</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-    <p style="margin-top: 50px;">December 6:</p>
-    <div onclick="location.href='pistol.html'" style="margin: auto;" class="polaroid w3-center w3-button">
-
-      <img src="images/pistolicon3.webp" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline;font-size: small;">Pistol Whippin’ Party Penguins</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-      <p style="margin-top: 50px;">December 12:</p>
-    <div onclick="location.href='xmas.html'" style="margin: auto;" class="polaroid w3-center w3-button">
-
-      <img src="images/xmas.jpg" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline;">Pop’s Honky Tonk<br>Christmas Show</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-    <p style="margin-top: 50px;">December 13:</p>
-    <div onclick="location.href='eric.html'" style="margin: auto;" class="polaroid w3-center w3-button">
-
-      <img src="images/ericicon.webp" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline;">Erik Koskinen</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-    <p style="margin-top: 50px;">December 20:</p>
-    <div onclick="location.href='MOO.html'" style="margin: auto;" class="polaroid w3-center w3-button">
-
-      <img src="images/drewiconbest.jpg" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline;">Mumblin’ Drew’s<br>Old Fangled Orchestrators</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-     <p style="margin-top: 50px;">January 10:</p>
-    <div onclick="location.href='davidh.html'" style="margin: auto;" class="polaroid w3-center w3-button">
-
-      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
-      <div class="container">
-
-        <p style="text-decoration: underline;">David Huckfelt</p>
-        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
-      </div>
-    </div>
-    <div style="height: 60px;" class=""></div>
-    <img src="parking.jpg" style="margin-top: 60px; margin: auto; width: 80%; max-width: 800px;" alt="">
-     <div style="height: 60px;" class=""></div>
-    <img src="images/horse.jpeg" style="margin-top: 60px; margin: auto; width: 80%; max-width: 800px;" alt="">
-    <div style="height: 60px;" class=""></div>
-    <img src="IMG_1682.PNG" style="margin-top: 60px; margin: auto; width: 80%; max-width: 800px;" alt="">
-    <p style="margin: auto;" class="w3-small">t-shirt design: Michael C.F. Hansen</p>
 
   </header>
+  <div class="hero">
 
-
-
-
-
-  <!-- Portfolio Section -->
-  <div style="display: none;" class="w3-padding-32 w3-content" id="portfolio">
-
-
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="liz.jpg" style="width:100%">
-        <img src="hotb.jpg" style="width:100%">
-
+    <div class="mySlides">
+      <div class="slideshow-container">
+        <div class="star-base"></div>
+        <img src="oldimgs/farm.jpg" class="slide-img" />
       </div>
-
-      <div class="w3-half">
-        <img src="steve.jpg" style="width:100%">
-        <img src="farm.jpg" style="width:100%">
-        <img src="hope.jpg" style="width:100%">
-
-      </div>
-      <!-- End photo grid -->
     </div>
-    <!-- End Portfolio Section -->
+
+    <div class="mySlides">
+      <div class="slideshow-container">
+        <div class="star-base"></div>
+        <img src="oldimgs/flowers.jpg" class="slide-img" />
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="slideshow-container">
+        <div class="star-base"></div>
+        <img src="oldimgs/food.jpg" class="slide-img" />
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="slideshow-container">
+        <div class="star-base"></div>
+        <img src="oldimgs/hope.jpg" class="slide-img" />
+      </div>
+    </div>
+
+  <div class="hero-text">
+   
+    <div class="menu-buttons">
+      <button>Newsletter</button>
+      <button onclick="location.href='about.html'">About</button>
+      <button onclick="location.href='shows.html'">Live Music</button>
+      <button>Parking</button>
+    </div>
   </div>
 
-  <!-- END PAGE CONTENT -->
   </div>
+
+  </div>
+<div style="padding: 20px;" class="w3-center">
+  <img src="parking.jpg" style="max-width: 400px; width: 80%;" alt="">
+</div>
+
 
   <script>
-    // Open and close sidebar
-    function openNav() {
-      document.getElementById("mySidebar").style.width = "60%";
-      document.getElementById("mySidebar").style.display = "block";
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var slides = document.getElementsByClassName("mySlides");
+
+      // hide all slides
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      // pick a random slide
+      var rand = Math.floor(Math.random() * slides.length);
+      slides[rand].style.display = "block"; // show the whole slide
+
+      setTimeout(showSlides, 2000); // repeat
+    }
+    function play() {
+      document.getElementById("stop").style.display = "block";
+      var audio = document.getElementById("audio");
+      audio.play();
+      document.getElementById("panel").style.display = "none";
+      document.getElementById("hand").style.display = "none";
+
+
+
+    }
+    function stop() {
+      document.getElementById("stop").style.display = "none";
+      document.getElementById("panel").style.display = "block";
+      var audio = document.getElementById("audio");
+      audio.pause();
+
     }
 
-    function closeNav() {
-      document.getElementById("mySidebar").style.display = "none";
-    }
+
   </script>
-
 </body>
-
-</html>

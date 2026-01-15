@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Event Tree</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <style>
+    div.polaroid {
+      width: 250px;
+      box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+      text-align: center;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 5px;
+    }
+
+    div.container {
+      padding: 10px;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Arvo", serif;
+      color: rgb(255, 255, 255);
+    }
+
+    .w3-row-padding img {
+      margin-bottom: 12px
+    }
+
+    .bgimg {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(poster.jpg);
+      min-height: 100%;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body style="background-color: black;">
+
+
+
+
+
+  <!-- Page Content -->
+
+
+
+
+  <!-- Header -->
+  <div class="w3-sidebar w3-bar-block" style="display:none;z-index:5;background-color: red;" id="mySidebar">
+    <button class="w3-bar-item w3-button" onclick="w3_close()">&#x2715;</button>
+    <a href="#" class="w3-bar-item w3-button">Newsletter</a>
+    <a href="#" class="w3-bar-item w3-button">Schedule</a>
+    <a href="#" class="w3-bar-item w3-button">About</a>
+    <a href="#" class="w3-bar-item w3-button">Donate</a>
+  </div>
+
+  <!-- Overlay -->
+  <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+  <!-- Page content -->
+
+  <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+<p class="w3-center">Oak Center General Store</p>
+
+
+
+
+  <header class="w3-container w3-center" style="padding:50px 16px;" id="home">
+
+    <h1 class="w3-xlarge"><b>Folk Forum</b></h1>
+    <h2 class="w3-large">2026 Winter/Spring</h2>
+
+
+
+
+
+
+
+
+    <p style="margin-top: 50px;">Saturday <br> January 10th</p>
+    <div onclick="location.href='davidh.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">David Huckfelt</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Friday <br> February 6th</p>
+    <div onclick="location.href='victrola.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Todd the Victrola Man - special Free event!</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Saturday <br> February 21st</p>
+    <div onclick="location.href='dean+b.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Dean Magraw & Bruce Henry</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Friday <br> February 27th</p>
+    <div onclick="location.href='betty.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Sophie Hiroko and Betty Won’t</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Saturday <br> March 7th</p>
+    <div onclick="location.href='corpse.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Corpse Reviver</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Friday <br> March 13th</p>
+    <div onclick="location.href='caitlin.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img id="slideshow" src="caitlin.jpg" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Caitlin Angelica & Joe “That Young Buck” Devito</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Saturday <br> March 14th</p>
+    <div onclick="location.href='joeprice.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Joe & Vicki Price</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Saturday <br> March 21st</p>
+    <div onclick="location.href='cornbread.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Cornbread Harris Band</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Sunday <br> March 22nd</p>
+    <div onclick="location.href='dean+joe.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Joe Schwen & Dean Magraw</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Saturday <br> March 28th</p>
+    <div onclick="location.href='sweetmilk.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Sweetmilk & Peaches</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Friday <br> April 10th</p>
+    <div onclick="location.href='bovee.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Bob Bovee</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Saturday <br> April 11th</p>
+    <div onclick="location.href='pieta.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Pieta Brown & Liz Draper</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Friday <br> April 17th</p>
+    <div onclick="location.href='harold.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Hurricane Harold & Jeff Ray</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Saturday <br> April 18th</p>
+    <div onclick="location.href='lone.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Lone Piñon</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Sunday <br> April 19th</p>
+    <div onclick="location.href='acker.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Chris Acker</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Friday <br> May 29th</p>
+    <div onclick="location.href='paper.html'" style="margin: auto;" class="polaroid w3-center w3-button">
+
+      <img src="images/davidicongood.png" alt="Norway" style="width:100%">
+      <div class="container">
+
+        <p style="text-decoration: underline;">Paper Wings</p>
+        <i class="fa fa-hand-peace-o fa fa-spin fa fa fa-lg" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div style="height: 60px;" class=""></div>
+    <img src="parking.jpg" style="margin-top: 60px; margin: auto; width: 80%; max-width: 800px;" alt="">
+    <div style="height: 60px;" class=""></div>
+    <img src="images/horse.jpeg" style="margin-top: 60px; margin: auto; width: 80%; max-width: 800px;" alt="">
+    <div style="height: 60px;" class=""></div>
+    <img src="IMG_1682.PNG" style="margin-top: 60px; margin: auto; width: 80%; max-width: 800px;" alt="">
+
+  </header>
+
+
+
+
+
+  <!-- Portfolio Section -->
+  <div style="display: none;" class="w3-padding-32 w3-content" id="portfolio">
+
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="liz.jpg" style="width:100%">
+        <img src="hotb.jpg" style="width:100%">
+
+      </div>
+
+      <div class="w3-half">
+        <img src="steve.jpg" style="width:100%">
+        <img src="farm.jpg" style="width:100%">
+        <img src="hope.jpg" style="width:100%">
+
+      </div>
+      <!-- End photo grid -->
+    </div>
+    <!-- End Portfolio Section -->
+  </div>
+
+  <!-- END PAGE CONTENT -->
+  </div>
+
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+
+    const images = ["caitlin.jpg", "joed.jpg"];
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      document.getElementById("slideshow").src = images[index];
+    }, 2000); // 2000 ms = 2 seconds
+
+  </script>
+
+</body>
+
+</html>

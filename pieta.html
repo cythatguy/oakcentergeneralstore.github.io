@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>April 11 Show</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Arvo", serif; color: white;}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(images/pietabig.webp);
+  min-height: 100%;
+  background-color: black;
+}
+.blink-border {
+  
+  border: 3px dotted gold;          /* initial gold dotted border */
+  border-radius: 8px;                /* optional rounded corners */
+  animation: blink-border 2.5s infinite;
+  padding: 5px;                       /* adjust as needed */
+}
+
+/* Only the border “blinks” by changing color */
+@keyframes blink-border {
+  0%, 50%, 100% {
+    border-color: gold;
+  }
+  25%, 75% {
+    border-color: transparent; /* border disappears temporarily */
+  }
+}
+</style>
+</head>
+<body style="background-color: black;">
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+
+
+  <!-- Header -->
+      <i onclick="location.href='shows.html'" class="fa fa-arrow-left w3-left w3-large"></i>
+  <header class="w3-container w3-center blink-border" style="padding:50px 10px 0px 10;max-width: 350px;margin: auto;margin-top: 60px;" id="home">
+    <h1 style="margin-bottom: 0px;font-size: 30px;">Folk Forum</h1>
+    <p style="margin-top: 0px; margin-bottom: 15px;">Presents:</p>
+    <p style="margin-top: 0px;" class="w3-xlarge">Pieta Brown & <br> Liz Draper
+    </p>
+
+    <img src="images/pieta.webp" id="change" class="w3-image w3-hide-large w3-round" style="aspect-ratio: 1;object-fit: cover;object-position: center; " width="" height="">
+  
+    
+  </header>  
+<div style="margin-top: 50px;" class="w3-center">
+
+  <p style="margin: 5px 0; font-weight: bold;">Oak Center General Store</p>
+  <p style="margin: 5px 0;">Saturday, April 11 @ 7:30pm</p>
+
+  <button 
+    onclick="location.href='https://square.link/FEP2sft'" 
+    type="button" 
+    class="w3-button w3-green w3-round-large w3-padding-large w3-hover-gold"
+    style="font-size:16px; min-width:200px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <i class="fa fa-ticket"></i> coming soon
+  </button>
+
+</div>  
+
+  
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>overview</h2>
+    <hr class="w3-opacity">
+    <h4>The Talent</h4>
+    <p> Pieta Brown: Hailed as a “self-styled poetess, folk goddess, and country waif” by the BBC, Pieta Brown first came to international prominence with the release of her self-titled debut in 2002. Since then she has released multiple highly critically acclaimed albums, EPs and singles, with much attention being paid not only to her distinct sound and style, but also the power of her singing and songwriting, including fan favorite, Paradise Outlaw, which Bon Iver mastermind Justin Vernon has called his “favorite recording made at our studio.” 
+
+Brown has toured worldwide with artists such as John Prine, Amos Lee, Brandi Carlisle, JJ Cale, Ani DiFranco, Mavis Staples, and Calexico among others. She has co-written songs with and made guest appearances on albums by Calexico, Amos Lee, Howe Gelb, and Iris Dement. Brown’s most recent album Freeway was co-produced by S. Carey and earned widespread critical acclaim from NPR Music, Stereogum, Billboard, FLOOD, Paste, American Songwriter, Folk Alley, and Relix. She followed that shortly after with the bold and experimental single “Follow You” as well as an EP/digital triptych collaboration recorded at Justin Vernon and Aaron Dessner’s HIVER Festival called We Are Not Machines featuring Ani DiFranco, S. Carey, Holland Andrews, Jenn Wassner, and more. 
+
+In 2022 Pieta further expanded her musical prowess by recording and releasing an album of original cinematic instrumentals, The Less I Needed The Better I Felt, under the moniker Sylvee & The Sea featuring John Convertino (Calexico), Don Was, and CJ Carmerieri (Carm). She also co-produced Iris DeMent’s most recent album Workin’ On A World, which has garnered praise from Rolling Stone and The New York Times among many others. Along the way she has earned respect and accolades for her talents in soundtrack design, videography, and photography as well; Brown’s photographs have appeared in gallery shows and on numerous album covers for fellow artists. Continually revealing new layers as a songwriter, singer, musician, producer, visual artist and performer, Brown is being recognized as a true multi-hyphenate and one of modern Americana’s true gems.
+
+“Pieta Brown sings about love and trust…“In my heart you sing clear and bright / It makes me feel like things will be all right,” she intones, convincing both herself and anyone listening.” - The New York Times</p>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1E3aMKOVLZ7qWoEZO7fMnA?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+<p>Liz Draper: classically and jazz-trained versatile bassist, has performed, recorded and/or toured internationally with such groups as the Grammy Award-winning Okee Dokee Brothers, Soul Asylum, Charlie Parr, The Rose Ensemble, Ben Weaver, Orkestar Bez Ime, and Davina and the Vagabonds. A professional musician since age 16, Liz has performed in an astonishing array of musical genres and ensembles, from jazz and classical to folk, metal, improvisational, experimental, Balkan, and chamber strings.</p> 
+  <h4>Tickets</h4>
+<p>$21.50 online <br>$24.00 at the door</p>
+    <h4>Agenda</h4>
+    
+    <ul>
+      <li>6:30-7:30 Doors</li>
+      <li>7:30-9:30 Music</li>
+     
+    </ul>
+    <h4>Location</h4>
+    <p>Address: 67011 hwy 63, Lake City, MN 55041</p>
+    <h4>Parking</h4>
+    <p>ONLY PARK ON EAST SIDE OF 82 (general store side of the gravel road)</p>
+    <p>refer to picture on homepage if confused</p>
+    <h4>Accessibility</h4>
+    <p>The music venue itself is only accessed via staircase. The show will be played over speakers on the main floor for anyone who cannot or wishes not to go upstairs. <br><br>Tickets are required only for guests that go upstairs.</p>
+
+    <h4>Any questions?</h4>
+   <p> phone: 616-260-4924 <br>
+    oakcentergeneralstoremn@gmail.com</p>
+    
+    
+    
+  <!-- End About Section -->
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/f_-JUnn0XXw?si=KkuYWuWSAYB4YwqT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </div>
+  <!-- End Portfolio Section -->
+  </div>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
