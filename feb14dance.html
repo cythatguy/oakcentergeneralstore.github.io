@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>February 14 Dance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Arvo", serif; color: white;}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(images/dancebig.jpg);
+  min-height: 100%;
+  background-color: black;
+}
+.blink-border {
+  
+  border: 3px dotted gold;          /* initial gold dotted border */
+  border-radius: 8px;                /* optional rounded corners */
+  animation: blink-border 2.5s infinite;
+  padding: 5px;                       /* adjust as needed */
+}
+
+/* Only the border “blinks” by changing color */
+@keyframes blink-border {
+  0%, 50%, 100% {
+    border-color: gold;
+  }
+  25%, 75% {
+    border-color: transparent; /* border disappears temporarily */
+  }
+}
+</style>
+</head>
+<body style="background-color: black;">
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+
+
+  <!-- Header -->
+      <i onclick="location.href='shows.html'" class="fa fa-arrow-left w3-left w3-large"></i>
+  <header class="w3-container w3-center blink-border" style="padding:50px 10px 0px 10;max-width: 350px;margin: auto;margin-top: 60px;" id="home">
+    <h1 style="margin-bottom: 0px;font-size: 30px;">Folk Forum and Oxheart Farm</h1>
+    <p style="margin-top: 0px; margin-bottom: 15px;">Presents:</p>
+    <p style="margin-top: 0px;" class="w3-xlarge">Square/Contra Dance
+    </p>
+
+  
+    
+  </header>  
+<div style="margin-top: 50px;" class="w3-center">
+
+  <p style="margin: 5px 0; font-weight: bold;">Bay City WI Town Hall</p>
+  <p style="margin: 5px 0;">Saturday, February 14 @ 7:30pm</p>
+
+  <button 
+   
+    type="button" 
+    class="w3-button w3-green w3-round-large w3-padding-large w3-hover-gold"
+    style="font-size:16px; min-width:200px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <i class="fa fa-ticket"></i> $10 (pay at event)
+  </button>
+
+</div>  
+
+  
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>overview</h2>
+    <hr class="w3-opacity">
+    
+    <p>Although not held at the Oak Center General Store, we have organized another square dance to be held at the Bay City Town Hall on Valentine’s Day! With a live band and caller, no experience is necessary to come to this dance. In days gone by, rural dances were where you'd go to mingle with potential suitors. What better day to continue this tradition than the fourteenth of February?! $10 cover and a dish to share!   </p>
+<h4>Tickets</h4>
+<p>$10 at the door. Kids Free</p>
+    <h4>Agenda</h4>
+    
+    <ul>
+      <li>5:00-6:00 Potluck</li>
+      <li>6:00 Dance</li>
+     
+    </ul>
+    <h4>Location</h4>
+    <p>W6391 Main St, Bay City, WI 54723</p>
+    <p>next to Chef Shack</p>
+
+    <h4>Any questions?</h4>
+   <p> phone: 616-260-4924 <br>
+    oakcentergeneralstoremn@gmail.com</p>
+    
+    
+    
+  <!-- End About Section -->
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
